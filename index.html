@@ -7,22 +7,22 @@ title: Mainpage
   <div class="top-strip"></div>
   <div class="content">
     <main class="container">
-    	<div class="row-fluid">
-    		<section class="content">
-    		  <h1>Ipsum List</h1>
-    		</section>
-    		<ul class="entries">
-    		{% for post in paginator.posts %}
-    		  <li>
-    		    <a href="{{ post.url }}">
+        <div class="row-fluid">
+                <section class="content">
+                  <h1>Ipsum List</h1>
+                </section>
+                <ul class="entries">
+                {% for post in paginator.posts %}
+                  <li>
+                    <a href="{{ post.url }}">
                       <span>{{ post.date | date: "%d %B %Y" }}</span>
-    		        <h3>{{ post.title }}</h3>
+                        <h3>{{ post.title }}</h3>
                       <div>{{ post.content |truncatehtml | truncatewords: 30 }}</div>
-    		    </a>
-    		  </li>
-    		{% endfor %}
-    		</ul>
-    	</div>
+                    </a>
+                  </li>
+                {% endfor %}
+                </ul>
+        </div>
       <hr>
       <div id="post-pagination">
         {% if paginator.previous_page %}
@@ -72,4 +72,3 @@ title: Mainpage
 
     </main>
   </div>
-

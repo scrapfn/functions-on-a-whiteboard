@@ -1,0 +1,77 @@
+<!doctype html>
+  <meta charset="utf-8">
+  <title>Algebra of Functions and Higher Order Functions</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|The+Girl+Next+Door|Calligraffitti' rel='stylesheet' type='text/css'>
+
+  <header>
+    <h1>Functions On a Whiteboard</h1>
+    <p>Functional Programming Without a Computer</p>
+  </header>
+
+  <div id="banner">
+    <span id="logo"></span>
+
+    <a href="/" class="button fork"><strong>Home</strong></a>
+    <div class="downloads">
+      <span>Downloads:</span>
+      <ul>
+        <li><a href="https://github.com/scrapfn/functions-on-a-whiteboard/zipball/master" class="button">ZIP</a></li>
+        <li><a href="https://github.com/scrapfn/functions-on-a-whiteboard/tarball/master" class="button">TAR</a></li>
+      </ul>
+    </div>
+  </div><!-- end banner -->
+
+  <div class="wrapper">
+
+
+    <section>
+      <h2>Algebra of Functions and Higher Order Functions</h2>
+<h3>Algebra of Functions</h3>
+
+<p>Just like numbers, functions have some operators defined on them.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">(f+g)(x)  =  f(x) + g(x)
+(f-g)(x)  =  f(x) - g(x)
+(f*g)(x)  =  f(x) * g(x)
+(f/g)(x)  =  f(x) / g(x)
+</code></pre></div>
+<p>Examples:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">let
+  f(x) = x*3
+  g(x) = x-2
+in
+  (f+g)(5) evaluates to 18
+  (f-g)(5) evaluetes to 12
+  (fg)(5)  evaluates to 45
+  (f/g)(5) evaluates to 5
+</code></pre></div>
+<h3>Higher Order Functions</h3>
+
+<p>If you remember from the last post, algebraic operators can be seen as a function that has two variables. It&#39;s alot of fun if you think about the operators of functions this way too.</p>
+
+<p>If <code>f</code> and <code>g</code> were functions, <code>f+g</code> is also a function. Which means <code>+</code> operator took two functions and yield another function.</p>
+
+<p>Functions which involve consumpution of a function inclusive-or production of function are called <strong>higher order functions</strong> because as opposed to normal functions working on numbers, they work on these functions.</p>
+
+<p>Having generalized the idea behind the algebra of functions, we can define our own functions on functions. Just like we defined functions on numbers.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">(f%g)(x)  =  f(x) % g(x)
+addTwo(f)(x)  =  2 + f(x)
+(f○g)(x)  =  f(g(x))
+
+The last one is probably the most interesting.
+
+f(g(h(i(j(k(x))))))  =  (f○g○h○i○j○k)(x)
+</code></pre></div>
+<p>That&#39;s it for today. We will look at <strong>lifts</strong> tomorrow.</p>
+
+    </section>
+
+    <footer>
+      <p>Project maintained by <a href="https://github.com/scrapfn">scrapfn</a></p>
+      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </footer>
+  </div>
+
+</html>
+

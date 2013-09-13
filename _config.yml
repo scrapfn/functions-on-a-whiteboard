@@ -3,4 +3,6 @@ server:   true
 markdown: redcarpet
 exclude:  ["vendor", "Gemfile", "Gemfile.lock"]
 pygments: true
-url:      http://scrapfn.github.io/functions-on-a-whiteboard
+name:        "Functions On a Whiteboard"
+description: "Functional Programming Without a Computer"
+#url:      http://scrapfn.github.io/functions-on-a-whiteboard

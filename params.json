@@ -1,1 +1,0 @@
-{"name":"Functions on a whiteboard","tagline":"Filling the gap between functions in algebra and functions in FP","body":"**liftRealToFn(op,f,g,x) = op(f(x), g(x))**","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}

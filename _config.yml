@@ -1,4 +1,6 @@
-auto: true
-server: true
+auto:     true
+server:   true
 markdown: redcarpet
-exclude: ["vendor", "Gemfile", "Gemfile.lock"]
+exclude:  ["vendor", "Gemfile", "Gemfile.lock"]
+pygments: true
+url:      http://scrapfn.github.io/functions-on-a-whiteboard/

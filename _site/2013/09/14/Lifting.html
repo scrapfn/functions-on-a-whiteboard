@@ -1,0 +1,87 @@
+<!doctype html>
+  <meta charset="utf-8">
+  <title>Function Lifting</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|The+Girl+Next+Door|Calligraffitti' rel='stylesheet' type='text/css'>
+
+  <header>
+    <h1>Functions On a Whiteboard</h1>
+    <p>Functional Programming Without a Computer</p>
+  </header>
+
+  <div id="banner">
+    <span id="logo"></span>
+
+    <a href="/" class="button fork"><strong>Home</strong></a>
+    <div class="downloads">
+      <span>Downloads:</span>
+      <ul>
+        <li><a href="https://github.com/scrapfn/functions-on-a-whiteboard/zipball/master" class="button">ZIP</a></li>
+        <li><a href="https://github.com/scrapfn/functions-on-a-whiteboard/tarball/master" class="button">TAR</a></li>
+      </ul>
+    </div>
+  </div><!-- end banner -->
+
+  <div class="wrapper">
+
+
+    <section>
+      <h2>Function Lifting</h2>
+<p>In the previous post we looked at the algebra of functions.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">(f+g)(x)  =  f(x) + g(x)
+(f-g)(x)  =  f(x) - g(x)
+(f*g)(x)  =  f(x) * g(x)
+(f/g)(x)  =  f(x) / g(x)
+...
+</code></pre></div>
+<p>Defining functions this way is tedious since we can easily recognize the pattern. Describing the pettern verbally is possible but it will never get as concise as defining them as mathematical expressions.</p>
+
+<p>We can utilize the notion of higher order functions that we established in the last post to <strong>describe the pattern with a function</strong>.</p>
+
+<p>The pattern we see is:
+<code>(f op g)(x) = f(x) op g(x)</code>
+where op is replaced by a function on real numbers.</p>
+
+<p>To describe the patten we first list all the variables in the above expression.
+<code>op, f, g, x</code></p>
+
+<p>Then write a function that has all these variables. Call it the <code>lift</code>.
+<code>lift(op,f,g,x) = f(x) op g(x)</code></p>
+
+<p>Remember binary operators are equivalent to functions with two variables. Let&#39;s rewrite it for consistency, and this is your lift right here.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">lift(op,f,g,x) = op(f(x), g(x))
+</code></pre></div>
+<p>The usage of the lift is straight forward. Feed a function on numbers to the lift and name it whatever you like.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">f+ = lift(+)
+f- = lift(-)
+f* = lift(*)
+f/ = lift(/)
+
+
+=====EXAMPLE=====
+
+let f(x) = x*2
+    g(x) = x+3
+    added = f+(f,g)
+    subed = f-(f,g)
+    muled = f*(f,g)
+    dived = f/(f,g)
+in
+    added(4) evaluates to 8+7 = 15
+    subed(4) evaluates to 8-7 = 1
+    muled(4) evaluates to 8*7 = 56
+    dived(4) evaluates to 8/7
+</code></pre></div>
+<p>Lift frees you from writing and reading the boilerplate over and over again. It generalizes the process of making the functions for numbers applicable for functions. The act of generalizing a pattern with a function is called <strong>abstraction</strong>. Abstraction is extremely important in functional programming because it makes the code shorter and arguably more readable.</p>
+
+    </section>
+
+    <footer>
+      <p>Project maintained by <a href="https://github.com/scrapfn">scrapfn</a></p>
+      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+    </footer>
+  </div>
+
+</html>
+

@@ -36,7 +36,7 @@ If `f` and `g` were functions, `f+g` is also a function. Which means `+` operato
 
 Functions which involve consumpution of a function inclusive-or production of function are called **higher order functions** because as opposed to normal functions working on numbers, they work on these functions.
 
-Having generalized the idea behind the algebra of functions, we can define our own functions on functions. Just like we defined functions on numbers.
+Having generalized the idea behind algebra of functions, we can define our own functions on functions. Just like we defined functions on numbers.
 
 ```
 (f%g)(x)  =  f(x) % g(x)

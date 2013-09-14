@@ -1,8 +1,8 @@
 <!doctype html>
   <meta charset="utf-8">
   <title>Function Lifting</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="http://scrapfn.github.io/functions-on-a-whiteboard/css/style.css">
+  <link rel="stylesheet" href="http://scrapfn.github.io/functions-on-a-whiteboard/css/syntax.css">
   <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|The+Girl+Next+Door|Calligraffitti' rel='stylesheet' type='text/css'>
 
   <header>
@@ -13,7 +13,7 @@
   <div id="banner">
     <span id="logo"></span>
 
-    <a href="/" class="button fork"><strong>Home</strong></a>
+    <a href="http://scrapfn.github.io/functions-on-a-whiteboard/" class="button fork"><strong>Home</strong></a>
     <div class="downloads">
       <span>Downloads:</span>
       <ul>
@@ -35,7 +35,7 @@
 (f/g)(x)  =  f(x) / g(x)
 ...
 </code></pre></div>
-<p>Defining functions this way is tedious since we can easily recognize the pattern. Describing the pettern verbally is possible but it will never get as concise as defining them as mathematical expressions.</p>
+<p>Defining functions this way is tedious since we can easily recognize the pattern. Describing the pettern verbally is possible but it will never get as concise as defining them as a mathematical expression.</p>
 
 <p>We can utilize the notion of higher order functions that we established in the last post to <strong>describe the pattern with a function</strong>.</p>
 
@@ -63,15 +63,15 @@ f/ = lift(/)
 
 let f(x) = x*2
     g(x) = x+3
-    added = f+(f,g)
-    subed = f-(f,g)
-    muled = f*(f,g)
-    dived = f/(f,g)
+    f+g = f+(f,g)
+    f-g = f-(f,g)
+    f*g = f*(f,g)
+    f/g = f/(f,g)
 in
-    added(4) evaluates to 8+7 = 15
-    subed(4) evaluates to 8-7 = 1
-    muled(4) evaluates to 8*7 = 56
-    dived(4) evaluates to 8/7
+    f+g(4)     evaluates to 8+7 = 15
+    f-g(4)     evaluates to 8-7 = 1
+    f*g(4)     evaluates to 8*7 = 56
+    f/g(4)     evaluates to 8/7
 </code></pre></div>
 <p>Lift frees you from writing and reading the boilerplate over and over again. It generalizes the process of making the functions for numbers applicable for functions. The act of generalizing a pattern with a function is called <strong>abstraction</strong>. Abstraction is extremely important in functional programming because it makes the code shorter and arguably more readable.</p>
 

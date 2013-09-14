@@ -12,19 +12,20 @@ title: Introduction to Functions
 > -- from Intermidiate Algebra by Robert Blitzer
 
 ```
-{}                 is a relation      --- A
+∅                 is a relation      --- A
 {(1,2)}             is a relation      --- B
 {(1,1),(1,2),(2,1)}      is a relation      --- C
 (1,2)               is not a relation
 
-domain of A is {}
+domain of A is ∅
 domain of B is {1}
 domain of C is {1,2}
 
-range of A is {}
+range of A is ∅
 range of B is {2}
 range of C is {1,2}
 ```
+
 
 #### Programming Terminology
 
@@ -43,7 +44,7 @@ range of C is {1,2}
 > -- from Intermidiate Algebra by Robert Blitzer
 
 ```
-{}                is a function
+∅                 is a function
 {(1,2)}            is a function
 {(1,1),(1,2),(2,1)}     is not a function
 {(0,0),(1,3),(2,3)}  is a function

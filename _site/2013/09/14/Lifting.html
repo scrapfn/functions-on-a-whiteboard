@@ -53,20 +53,20 @@ where op is replaced by a function on real numbers.</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">lift(op,f,g,x) = op(f(x), g(x))
 </code></pre></div>
 <p>The usage of the lift is straight forward. Feed a function on numbers to the lift and name it whatever you like.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">f+ = lift(+)
-f- = lift(-)
-f* = lift(*)
-f/ = lift(/)
+<div class="highlight"><pre><code class="text language-text" data-lang="text">_+_ = lift(+)
+_-_ = lift(-)
+_*_ = lift(*)
+_/_ = lift(/)
 
 
 =====EXAMPLE=====
 
 let f(x) = x*2
     g(x) = x+3
-    f+g = f+(f,g)
-    f-g = f-(f,g)
-    f*g = f*(f,g)
-    f/g = f/(f,g)
+    f+g = _+_(f,g)
+    f-g = _-_(f,g)
+    f*g = _*_(f,g)
+    f/g = _/_(f,g)
 in
     f+g(4)     evaluates to 8+7 = 15
     f-g(4)     evaluates to 8-7 = 1

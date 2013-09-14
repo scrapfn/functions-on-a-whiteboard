@@ -75,5 +75,5 @@ f(x) = x + 1
  Functions with one variable will result in a line graph.
  ![f(x)=x^2 computed using wolfram alpha]({{ site.url }}/images/article/fx_x2.png)
 
- Functions with more than one variable will result in a complicated multi dimention graph.
+ Functions with more than one variable will result in a complicated multi dimentional graph.
  ![f(x,z)=x^z computed usin wolfram alpha]({{ site.url }}/images/article/fxz_xz.png)
